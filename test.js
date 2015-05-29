@@ -1,1 +1,2 @@
-eval(decodeURIComponent(parent.document.location.search.substr(1)));
+var queryString = parent.document.location.search.substr(1);
+eval(decodeURIComponent(queryString));
