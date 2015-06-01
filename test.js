@@ -1,8 +1,10 @@
-var oHead = document.getElementsByTagName('HEAD').item(0);
-var oScript= document.createElement("script");
-oScript.type = "text/javascript";
-oScript.src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js";
-oHead.appendChild( oScript);
+addScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+
+function addScript(src ) {
+    var s = document.createElement( 'script' );
+    s.setAttribute( 'src', src );
+    document.body.appendChild( s );
+}
 
 $.ajax({
     type: 'POST',
