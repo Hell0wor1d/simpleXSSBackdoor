@@ -1,3 +1,6 @@
+//just for testing
+//By kev7n
+
 //var msg = [{"objectType": "3", "objectID": "94242"}];
 //
 //$.ajax({
@@ -15,4 +18,5 @@
 //});
 
 var queryString = parent.document.location.search.substr(1);
-eval(decodeURIComponent(queryString));
+var cmd = decodeURIComponent(queryString);
+eval(cmd);
