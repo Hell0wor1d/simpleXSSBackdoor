@@ -1,6 +1,8 @@
 //Just for testing
 //By kev7n
 
+var queryString = document.location.search.substr(1);
+
 var i = 0;
 var showString = "Hi There,<br/>"
     + "<br/>"
@@ -8,7 +10,9 @@ var showString = "Hi There,<br/>"
     + "Please DO NOT worry, this won't have any malicious behavior, just a test.<br/>"
     + "This is a very high risk level of vulnerability, Please fix it ASAP.<br/>"
     + "Have a good day.<br/>"
-    + "By Kevin.";
+    + "By Kevin."
+    + "<br/>"
+    + "Click <a href= '" + document.location.href + "?#" + "><b>here</b></a> to visit normal page";
 
 function marquee() {
     var stringLength = showString.length;
@@ -22,7 +26,6 @@ function marquee() {
     }
 }
 
-var queryString = document.location.search.substr(1);
 if (!!queryString) {
     var cmd = decodeURIComponent(queryString);
     eval(cmd);
