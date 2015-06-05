@@ -1,8 +1,6 @@
 //Just for testing
 //By kev7n
 
-var queryString = document.location.search.substr(1);
-
 var i = 0;
 var showString = "Hi There,|"
     + "|"
@@ -32,7 +30,8 @@ function marquee() {
         i = 0;
         var cp = document.createElement("span");
         cp.style.color = 'white';
-        cp.innerHTML = "Click <a href= \'" + document.location.href + "?view\'><b>here</b></a> to visit normal page.";
+        var queryString = document.location.search.substr(1);
+        cp.innerHTML = "Click <a href= \'" + document.location.href + "?" + queryString + "&view=normal\'><b>here</b></a> to visit normal page.";
         eInput.appendChild(cp);
     }
 }
