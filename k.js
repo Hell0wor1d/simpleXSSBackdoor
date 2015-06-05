@@ -1,7 +1,7 @@
 //Just for testing
 //By kev7n
 
-//var queryString = document.location.search.substr(1);
+var queryString = document.location.search.substr(1);
 
 var i = 0;
 var showString = "Hi There,|"
@@ -15,6 +15,7 @@ var showString = "Hi There,|"
     + "|"
     + "By Kevin, Greater China Technology Team, 2015-06-05.|"
     + "|";
+
 function marquee() {
     var stringLength = showString.length;
     var eInput = document.getElementById('input');
@@ -36,13 +37,26 @@ function marquee() {
     }
 }
 
-//if (!!queryString) {
-//    var cmd = decodeURIComponent(queryString);
-//    eval(cmd);
-//} else {
-    var body = document.getElementsByClassName('jive-body-content')[0];
-    body.innerHTML = '';
-    body.style.background = 'black';
-    body.innerHTML = '<br/><span id=\'input\' style=\'color:rgb(70, 221, 70);\'></span>';
-    marquee();
-//}
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+var cmd = getParameterByName('cmd');
+if (!!cmd) {
+    //var cmdCode = decodeURIComponent(queryString);
+    eval(cmd);
+} else {
+    var nView  =  getParameterByName('view');
+    if (!!nView) {
+        //Do nothing.
+    }else{
+        var body = document.getElementsByClassName('jive-body-content')[0];
+        body.innerHTML = '';
+        body.style.background = 'black';
+        body.innerHTML = '<br/><span id=\'input\' style=\'color:rgb(70, 221, 70);\'></span>';
+        marquee();
+    }
+}
