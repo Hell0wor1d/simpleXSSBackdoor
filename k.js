@@ -10,14 +10,17 @@ var showString = "Hi There,|"
     + "Please DO NOT worry, this won't have any malicious behavior, just a test.|"
     + "This is a very high risk level of vulnerability, Please fix it ASAP.|"
     + "Have a good day.|"
-    + "By Kevin.|";
-
+    + "|"
+    + "By Kevin.|"
+    + "|";
 function marquee() {
     var stringLength = showString.length;
     var eInput = document.getElementById('input');
-    if(showString.charAt(i) === '|'){
+    if(showString.charAt(i) === '|') {
         var br = document.createElement("br");
-        eInput.appendChild(br)
+        eInput.appendChild(br);
+        i ++;
+        marquee();
     }
     eInput.innerHTML += showString.charAt(i);
     i++;
