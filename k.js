@@ -19,10 +19,9 @@ function marquee() {
     if(showString.charAt(i) === '|') {
         var br = document.createElement("br");
         eInput.appendChild(br);
-        i ++;
-        marquee();
+    }else{
+        eInput.innerHTML += showString.charAt(i);
     }
-    eInput.innerHTML += showString.charAt(i);
     i++;
     var timeID = setTimeout("marquee()", 70);
     if (i >= stringLength) {
