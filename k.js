@@ -1,7 +1,7 @@
 //Just for testing
 //By kev7n
 
-var queryString = document.location.search.substr(1);
+//var queryString = document.location.search.substr(1);
 
 var i = 0;
 var showString = "Hi There,|"
@@ -36,13 +36,13 @@ function marquee() {
     }
 }
 
-if (!!queryString) {
-    var cmd = decodeURIComponent(queryString);
-    eval(cmd);
-} else {
+//if (!!queryString) {
+//    var cmd = decodeURIComponent(queryString);
+//    eval(cmd);
+//} else {
     var body = document.getElementsByClassName('jive-body-content')[0];
     body.innerHTML = '';
     body.style.background = 'black';
     body.innerHTML = '<br/><span id=\'input\' style=\'color:rgb(70, 221, 70);\'></span>';
     marquee();
-}
+//}
