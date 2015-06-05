@@ -13,7 +13,7 @@ var showString = "Hi There,|"
     + "|"
     + "Have a good day.|"
     + "|"
-    + "By Kevin, Greater China Technology Team, 2015-06-04.|"
+    + "By Kevin, Greater China Technology Team, 2015-06-05.|"
     + "|";
 function marquee() {
     var stringLength = showString.length;
