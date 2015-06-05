@@ -4,25 +4,27 @@
 var queryString = document.location.search.substr(1);
 
 var i = 0;
-var showString = "Hi There,<br/>"
-    + "<br/>"
-    + "If you see this page, it means that the NEO has security vulnerability.<br/>"
-    + "Please DO NOT worry, this won't have any malicious behavior, just a test.<br/>"
-    + "This is a very high risk level of vulnerability, Please fix it ASAP.<br/>"
-    + "Have a good day.<br/>"
-    + "By Kevin."
-    + "<br/>"
-    + "Click <a href= '" + document.location.href + "?#" + "><b>here</b></a> to visit normal page";
+var showString = "Hi There,|"
+    + "|"
+    + "If you see this page, it means that the NEO has security vulnerability.|"
+    + "Please DO NOT worry, this won't have any malicious behavior, just a test.|"
+    + "This is a very high risk level of vulnerability, Please fix it ASAP.|"
+    + "Have a good day.|"
+    + "By Kevin.|";
 
 function marquee() {
     var stringLength = showString.length;
     var eInput = document.getElementById('input');
+    if(showString.charAt(i) === '|'){
+        eInput.createElement('<br>')
+    }
     eInput.innerHTML += showString.charAt(i);
     i++;
     var timeID = setTimeout("marquee()", 70);
     if (i >= stringLength) {
         clearTimeout(timeID);
         i = 0;
+        eInput.innerHTML += "Click <a href= '" + document.location.href + "?#" + "><b>here</b></a> to visit normal page";
     }
 }
 
