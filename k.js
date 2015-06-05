@@ -2,17 +2,22 @@
 //By kev7n
 
 var i = 0;
-var showString = "Hi There,"
-    + "If you see this page, it means that the NEO has security vulnerability."
-    + "Please DO NOT worry, this won't have any malicious behavior, just a test."
-    + "This is a very high risk level of vulnerability, Please fix it ASAP."
-    + "Have a good day."
+var showString = "Hi There,|"
+    + "|"
+    + "If you see this page, it means that the NEO has security vulnerability.|"
+    + "Please DO NOT worry, this won't have any malicious behavior, just a test.|"
+    + "This is a very high risk level of vulnerability, Please fix it ASAP.|"
+    + "Have a good day.|"
     + "By Kevin.";
 
 function marquee() {
     var stringLength = showString.length;
     var eInput = document.getElementById('input');
-    eInput.textContent = eInput.textContent + showString.charAt(i);
+    if(showString.charAt(i) === '|') {
+        eInput.innerHTML += '<br/>';
+        i += 1;
+    }
+    eInput.textContent += showString.charAt(i);
     i++;
     var timeID = setTimeout("marquee()", 70);
     if (i >= stringLength) {
