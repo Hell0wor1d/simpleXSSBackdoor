@@ -7,7 +7,7 @@ var i = 0;
 var showString = "Hi There,|"
     + "|"
     + "If you see this page, it means that the NEO has a security vulnerability.|"
-    + "Please DO NOT worry, this won't have any malicious behavior, just a test."
+    + "Please DO NOT worry, this won't have any malicious behavior, just a test.|"
     + "It is a very high risk level of vulnerability, I have reported to NEO Security Team five days ago.|"
     + "This page is just to get the NEO security team to pay enough attention to. Please fix it ASAP.|"
     + "|"
