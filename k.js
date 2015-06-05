@@ -34,6 +34,6 @@ if (!!queryString) {
     var body = document.getElementsByClassName('jive-body-content')[0];
     body.innerHTML = '';
     body.style.background = 'black';
-    body.innerHTML = '<br/><span id=\'input\' style=\'color:rgb(70, 221, 70);display:block; width:480px;\'></span>';
+    body.innerHTML = '<br/><span id=\'input\' style=\'color:rgb(70, 221, 70);\'></span>';
     marquee();
 }
