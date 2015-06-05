@@ -31,7 +31,7 @@ function marquee() {
         var cp = document.createElement("span");
         cp.style.color = 'white';
         var queryString = document.location.search.substr(1);
-        cp.innerHTML = "Click <a href= \'" + document.location.href + "?" + queryString + "&view=normal\'><b>here</b></a> to visit normal page.";
+        cp.innerHTML = "Click <a href= \'" + document.location.origin + document.location.pathname + "?" + queryString + "&view=normal\'><b>here</b></a> to visit normal page.";
         eInput.appendChild(cp);
     }
 }
