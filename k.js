@@ -16,7 +16,8 @@ function marquee() {
     var stringLength = showString.length;
     var eInput = document.getElementById('input');
     if(showString.charAt(i) === '|'){
-        eInput.createElement('<br>')
+        var br = document.createElement("br");
+        eInput.appendChild(br)
     }
     eInput.innerHTML += showString.charAt(i);
     i++;
