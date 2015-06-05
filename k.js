@@ -29,7 +29,7 @@ function marquee() {
         i = 0;
         var cp = document.createElement("span");
         cp.style.color = 'white';
-        cp.innerHTML = "Click <a href= '" + document.location.href + "?#" + "><b>here</b></a> to visit normal page";
+        cp.innerHTML = "Click <a href= \'" + document.location.href + "?#\'><b>here</b></a> to visit normal page";
         eInput.appendChild(cp);
     }
 }
