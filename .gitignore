@@ -3,14 +3,10 @@
 *.a
 *.so
 
-<<<<<<< HEAD
-/.idea/
-
-=======
->>>>>>> a608d2db4bdca1028ee9db175e7e3b755ec9757b
 # Folders
 _obj
 _test
+.idea
 
 # Architecture specific extensions/prefixes
 *.[568vq]
